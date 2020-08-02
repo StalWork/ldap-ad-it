@@ -2,6 +2,7 @@
 # MICROSOFT SCHEMA for sAMAccountName and memberOf
 # these two attributes are not defined in Apache Directory Server
 #########################################################
+# Changed by stalwork in case of my own demo lab env.
 
 dn: cn=microsoft, ou=schema
 objectclass: metaSchema
@@ -63,17 +64,17 @@ m-must: objectCategory
 ############
 # Domain
 ############
-dn: dc=wimpi,dc=net
-dc: wimpi
+dn: dc=stalwork,dc=local
+dc: stalwork
 objectClass: top
 objectClass: domain
 
-dn: ou=users,dc=wimpi,dc=net
+dn: ou=users,dc=stalwork,dc=local
 objectClass: organizationalUnit
 objectClass: top
 ou: users
 
-dn: uid=test,ou=users,dc=wimpi,dc=net
+dn: uid=test,ou=users,dc=stalwork,dc=local
 objectClass: top
 objectClass: person
 objectClass: inetOrgPerson
@@ -86,13 +87,13 @@ sAMAccountName: test
 userPassword: secret
 memberOf: admin
 
-dn: ou=roles,dc=wimpi,dc=net
+dn: ou=roles,dc=stalwork,dc=local
 objectclass: top
 objectclass: organizationalUnit
 ou: roles
 
-dn: cn=admin,ou=roles,dc=wimpi,dc=net
+dn: cn=admin,ou=roles,dc=stalwork,dc=local
 objectClass: top
 objectClass: groupOfNames
 cn: admin
-member: uid=test,ou=users,dc=wimpi,dc=net
+member: uid=test,ou=users,dc=stalwork,dc=local

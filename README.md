@@ -1,11 +1,11 @@
 # Simple LDAP server simulating AD for integration testing
 
-This is a simple LDAP server that tries to simulate an AD using 
+This is a simple LDAP server that tries to simulate an AD using
 Apache Directory Server.
 
 * Should work for activedirectory.js
-* Is based on https://github.com/kwart/ldap-server/ and 
-   http://stackoverflow.com/questions/11174835/add-memberof-attribute-to-apacheds 
+* Is based on https://github.com/kwart/ldap-server/ and
+   http://stackoverflow.com/questions/11174835/add-memberof-attribute-to-apacheds
 
 
 ## Docker
@@ -14,4 +14,4 @@ Apache Directory Server.
 2. Run the image using  
    `docker run -it --rm -p 10389:10389 dwimberger/ldap-ad-it`
 
-
+### Changed by StalWork in case of my own demo test lab env.
